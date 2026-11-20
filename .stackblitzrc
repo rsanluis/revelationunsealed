@@ -1,3 +1,4 @@
 {
+    "startCommand": "false",
     "compileTrigger": "save"
 }
