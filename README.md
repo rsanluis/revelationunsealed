@@ -2,8 +2,7 @@
 
 # Run in https://stackblitz.com or Visual Studio Code
 
-npx vitest run test -t "determineMonthAndDay: add 3117 days to 10/30 returns May 13"
-
+Test to add 3117 days to October 30th using the range of years from 1600 to 2030
 ```js
-console.log("GitHub will show a copy button here automatically.");
+npx vitest run test -t "determineMonthAndDay: add 3117 days to 10/30 returns May 13"
 ```
