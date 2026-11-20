@@ -15,11 +15,11 @@ describe('DateUtils', () => {
     expect(determineMonthAndDay(monthDay(10, 30), Operation.ADD, 3117)).toBe('May 13')
   })
 
-  test('determineMonthDayAndYear: add from LocalDate returns October 30, 2030', () => {
+  test('determineExactMonthDayAndYear: add from LocalDate returns October 30, 2030', () => {
     expect(determineExactMonthDayAndYear(localDate(2024, 7, 13), Operation.ADD, 2300)).toBe('October 30, 2030')
   })
 
-  test('determineMonthDayAndYear: subtract from LocalDate returns July 13, 2024', () => {
+  test('determineExactMonthDayAndYear: subtract from LocalDate returns July 13, 2024', () => {
     expect(determineExactMonthDayAndYear(localDate(2030, 10, 30), Operation.SUBTRACT, 2300)).toBe('July 13, 2024')
   })
 
