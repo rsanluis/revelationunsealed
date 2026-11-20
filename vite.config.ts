@@ -10,6 +10,6 @@ export default defineConfig({
     // globals: true,
 
     // List every test by name in the output (like JUnit), not just a per-file summary
-    reporters: ['verbose'],
+    reporters: ['default'],
   },
 })

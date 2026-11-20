@@ -1,5 +1,5 @@
-# Vitest Demo
+# Revelation Unsealed Unit Tests
 
-Run `npm test` and change a test or source code to see HMR in action!
+# Run in https://stackblitz.com or Visual Studio Code
 
-Learn more at https://vitest.dev
+npx vitest run test -t "determineMonthAndDay: add 3117 days to 10/30 returns May 13"
