@@ -17,15 +17,15 @@ describe('DateUtils', () => {
   })
 
   test('determineExactMonthDayAndYear: add 2300 days to 7/13/2024 returns October 30, 2030', () => {
+    expect(determineExactMonthDayAndYear('7/13/2024', Operation.ADD, 2300)).toBe('October 30, 2030')
+  })
+
+  test('determineExactMonthDayAndYear: add 2300 days to 7/13/2024 returns October 30, 2030', () => {
     expect(determineExactMonthDayAndYear(localDate(2024, 7, 13), Operation.ADD, 2300)).toBe('October 30, 2030')
   })
 
   test('determineExactMonthDayAndYear: subtract 2300 days from 10/30/2030 returns July 13, 2024', () => {
     expect(determineExactMonthDayAndYear(localDate(2030, 10, 30), Operation.SUBTRACT, 2300)).toBe('July 13, 2024')
-  })
-
-  test('determineExactMonthDayAndYear: add 2300 days to 7/13/2024 returns October 30, 2030', () => {
-    expect(determineExactMonthDayAndYear('7/13/2024', Operation.ADD, 2300)).toBe('October 30, 2030')
   })
 
   test('determineExactMonthDayAndYear: subtract 2300 days from 10/30/2030 returns July 13, 2024', () => {
