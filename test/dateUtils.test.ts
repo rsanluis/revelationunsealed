@@ -11,23 +11,23 @@ import {
 // Ported from esword-cli: src/test/java/com/codified/esword/util/DateUtilsTest.java
 
 describe('DateUtils', () => {
-  test('determineMonthAndDay: add from MonthDay returns May 13', () => {
+  test('determineMonthAndDay: add 3117 days to 10/30 returns May 13', () => {
     expect(determineMonthAndDay(monthDay(10, 30), Operation.ADD, 3117)).toBe('May 13')
   })
 
-  test('determineExactMonthDayAndYear: add from LocalDate returns October 30, 2030', () => {
+  test('determineExactMonthDayAndYear: add 2300 days to 7/13/2024 returns October 30, 2030', () => {
     expect(determineExactMonthDayAndYear(localDate(2024, 7, 13), Operation.ADD, 2300)).toBe('October 30, 2030')
   })
 
-  test('determineExactMonthDayAndYear: subtract from LocalDate returns July 13, 2024', () => {
+  test('determineExactMonthDayAndYear: subtract 2300 days from 10/30/2030 returns July 13, 2024', () => {
     expect(determineExactMonthDayAndYear(localDate(2030, 10, 30), Operation.SUBTRACT, 2300)).toBe('July 13, 2024')
   })
 
-  test('determineExactMonthDayAndYear: add from string returns October 30, 2030', () => {
+  test('determineExactMonthDayAndYear: add 2300 days to 7/13/2024 returns October 30, 2030', () => {
     expect(determineExactMonthDayAndYear('7/13/2024', Operation.ADD, 2300)).toBe('October 30, 2030')
   })
 
-  test('determineExactMonthDayAndYear: subtract from string returns July 13, 2024', () => {
+  test('determineExactMonthDayAndYear: subtract 2300 days from 10/30/2030 returns July 13, 2024', () => {
     expect(determineExactMonthDayAndYear('10/30/2030', Operation.SUBTRACT, 2300)).toBe('July 13, 2024')
   })
 
@@ -51,17 +51,17 @@ describe('DateUtils', () => {
     expect(() => determineExactMonthDayAndYear(null as unknown as string, Operation.ADD, 1)).toThrow(TypeError)
   })
 
-  test('determineMonthAndDay: subtract from MonthDay returns October 30', () => {
+  test('determineMonthAndDay: subtract 3117 days from 5/13 returns October 30', () => {
     expect(determineMonthAndDay(monthDay(5, 13), Operation.SUBTRACT, 3117)).toBe('October 30')
   })
 
   // G5479 - From G5463; cheerfulness, that is, calm delight: - gladness, X
   // greatly, (X be exceeding) joy (-ful, -fully, -fulness, -ous).
-  test('determineMonthAndDay: subtract 5479 from October 30 MonthDay returns October 30', () => {
+  test('determineMonthAndDay: subtract 5479 days from 10/30 returns October 30', () => {
     expect(determineMonthAndDay(monthDay(10, 30), Operation.SUBTRACT, 5479)).toBe('October 30')
   })
 
-  test('determineMonthAndDay: add 5479 to October 30 MonthDay returns October 30', () => {
+  test('determineMonthAndDay: add 5479 days to 10/30 returns October 30', () => {
     expect(determineMonthAndDay(monthDay(10, 30), Operation.ADD, 5479)).toBe('October 30')
   })
 
